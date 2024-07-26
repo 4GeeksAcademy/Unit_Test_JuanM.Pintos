@@ -24,3 +24,4 @@ function fromYenToPound(JPY){
 
 module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
 
+console.log(fromYenToPound(50));
