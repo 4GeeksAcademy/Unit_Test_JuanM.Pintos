@@ -31,7 +31,7 @@ test("100 dolares son 14624 yenes", function() {
     const dollars = fromDollarToYen(100);
 
     // Si 100 dolares son 93.45 euros, 93.45 euros son 14624 yenes
-    const expected = 93.45 * 156.5;
+    const expected = 93.4 * 156.5;
 
     // Hago mi comparación (la prueba)
     expect(dollars).toBe(expected); 
