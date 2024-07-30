@@ -13,11 +13,11 @@ let oneEuroIs = {
  function fromEuroToDollar(EUR){
     return EUR * oneEuroIs.USD;
     }
-//Dollar a Yen 100 dolares son 93,45 euros, y 93,45 euros son 14.624 yenes //
+//Dollar a Yen; 100 dolares son 93,45 euros, y 93,45 euros son 14.624 yenes //
     function fromDollarToYen(USD){
 return (USD/oneEuroIs.USD)*oneEuroIs.JPY
 }
-// 1000 yenes son 6,3 euros y a su vez son 5,5 libras esterlina
+// 1000 yenes son 6.3 euros y a su vez son 5.5 libras esterlina
 function fromYenToPound(JPY){
     return (JPY/oneEuroIs.JPY)*oneEuroIs.GBP
 }

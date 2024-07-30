@@ -14,39 +14,38 @@ test("One euro should be 1.07 dollars", function() {
     const { fromEuroToDollar } = require('./app.js');
 
     // Uso la función como debe ser usada
-    const dollars = fromEuroToDollar(3.5);
+    const euros = fromEuroToDollar(1);
 
     // Si 1 euro son 1.07 dólares, entonces 3.5 euros debe ser (3.5 * 1.07)
-    const expected = 3.5 * 1.07;
+    const expected = 1 * 1.07;
 
     // Hago mi comparación (la prueba)
-    expect(dollars).toBe(expected); // 1 euro son 1.07 dólares, entonces 3.5 euros deberían ser = (3.5 * 1.07)
+    expect(euros).toBe(expected); // 1 euro son 1.07 dólares, entonces 3.5 euros deberían ser = (3.5 * 1.07)
 })
 
-test("20 dolares deben ser 3130", function() {
+test("100 dolares son 14624 yenes", function() {
     // Importo la funcion desde app.js
     const { fromDollarToYen } = require('./app.js');
 
     // Uso la función como debe ser usada
-    const dollars = fromDollarToYen(20);
+    const dollars = fromDollarToYen(100);
 
-    // Si 1 euro son 1.07 dólares, entonces 3.5 euros debe ser (3.5 * 1.07)
-    const expected = 20 * 156.5;
+    // Si 100 dolares son 93.45 euros, 93.45 euros son 14624 yenes
+    const expected = 93.45 * 156.5;
 
     // Hago mi comparación (la prueba)
-    expect(dollars).toBe(expected); // 1 euro son 1.07 dólares, entonces 3.5 euros deberían ser = (3.5 * 1.07)
+    expect(dollars).toBe(expected); 
 })
 
-test("20 yens deben ser 43.5 pound", function() {
+test("1000 yenes son 5.5 libras esterlinas", function() {
     // Importo la funcion desde app.js
     const { fromYenToPound } = require('./app.js');
 
     // Uso la función como debe ser usada
-    const dollars = fromYenToPound(20);
-
-    // Si 1 euro son 1.07 dólares, entonces 3.5 euros debe ser (3.5 * 1.07)
-    const expected = 20 * 0.87;
+    const yenes = fromYenToPound(1000);
+// 1000 yenes son 6.3 euros, 6.3 euros * 0.87 son 5.5 libras
+    const expected = 6.3 * 0.87;
 
     // Hago mi comparación (la prueba)
-    expect(dollars).toBe(expected); // 1 euro son 1.07 dólares, entonces 3.5 euros deberían ser = (3.5 * 1.07)
+    expect(yenes).toBe(expected); 
 })
