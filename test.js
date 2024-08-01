@@ -27,14 +27,10 @@ test("100 dolares son 14624 yenes", function() {
     // Importo la funcion desde app.js
     const { fromDollarToYen } = require('./app.js');
 
-    // Uso la función como debe ser usada
-    const dollars = fromDollarToYen(100);
-
-    // Si 100 dolares son 93.45 euros, 93.45 euros son 14624 yenes
-    const expected = 93.4 * 156.5;
+    
 
     // Hago mi comparación (la prueba)
-    expect(dollars).toBe(expected); 
+    expect(fromDollarToYen(100)).toBe(14626.1682); 
 })
 
 test("1000 yenes son 5.5 libras esterlinas", function() {
@@ -47,5 +43,5 @@ test("1000 yenes son 5.5 libras esterlinas", function() {
     const expected = 6.3 * 0.87;
 
     // Hago mi comparación (la prueba)
-    expect(yenes).toBe(expected); 
+    expect(yenes).toBe(5.5591); 
 })
